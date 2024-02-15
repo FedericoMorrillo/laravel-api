@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-
+//          //URI       //controller in cartella api  //metodo del controller
 Route::get('projects', [ProjectController::class, 'index']);
