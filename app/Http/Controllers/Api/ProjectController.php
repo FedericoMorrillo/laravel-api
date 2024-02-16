@@ -12,7 +12,10 @@ class ProjectController extends Controller
     public function index()
     {
         // prendiamo tutti i dati di projects
-        $projects = Project::all();
+        //$projects = Project::all();
+
+        //prendiamo tuti i dati di projects anche delle tabelle collegate
+        $projects = Project::with('type', 'technology')->get();
 
         // ritorna i dati in file json
         return response()->json([
